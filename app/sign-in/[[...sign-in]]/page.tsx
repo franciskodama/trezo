@@ -81,8 +81,9 @@ export default function SignInPage() {
               <form
                 onSubmit={handleCredentialsSignIn}
                 className='flex flex-col gap-4 w-full mb-8'
+                suppressHydrationWarning
               >
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2' suppressHydrationWarning>
                   <Input
                     id='email'
                     type='email'
@@ -91,9 +92,10 @@ export default function SignInPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className='rounded-xl border-slate-200'
+                    suppressHydrationWarning
                   />
                 </div>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2' suppressHydrationWarning>
                   <Input
                     id='password'
                     type='password'
@@ -102,6 +104,7 @@ export default function SignInPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className='rounded-xl border-slate-200'
+                    suppressHydrationWarning
                   />
                 </div>
                 <div className='flex justify-center'>

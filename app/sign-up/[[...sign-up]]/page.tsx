@@ -61,8 +61,8 @@ export default function SignUpPage() {
             Start tracking your assets with Trezo today.
           </p>
 
-          <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-full'>
-            <div className='flex flex-col gap-2'>
+          <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-full' suppressHydrationWarning>
+            <div className='flex flex-col gap-2' suppressHydrationWarning>
               <Label htmlFor='name'>Full Name</Label>
               <Input
                 id='name'
@@ -72,9 +72,10 @@ export default function SignUpPage() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className='rounded-xl border-slate-200'
+                suppressHydrationWarning
               />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2' suppressHydrationWarning>
               <Label htmlFor='email'>Email</Label>
               <Input
                 id='email'
@@ -84,9 +85,10 @@ export default function SignUpPage() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className='rounded-xl border-slate-200'
+                suppressHydrationWarning
               />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2' suppressHydrationWarning>
               <Label htmlFor='password'>Password</Label>
               <Input
                 id='password'
@@ -96,6 +98,7 @@ export default function SignUpPage() {
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className='rounded-xl border-slate-200'
+                suppressHydrationWarning
               />
             </div>
             <Button
