@@ -35,7 +35,6 @@ import {
 import { useReviewedAssets } from '@/app/(dashboard)/assets/reviewed-context';
 import { playUpdateAssetSound } from '@/lib/sound';
 
-
 export function UpdateAssetForm({
   asset,
   isReviewed,
@@ -82,7 +81,6 @@ export function UpdateAssetForm({
   const assetWallet = getWallets(assetSubtype);
   const assetCurrency: string[] = getCurrencies(assetSubtype);
   const assetAccount = getAccounts(assetSubtype);
-  // const assetExchange = getExchanges(assetSubtype);
 
   const processForm: SubmitHandler<Inputs> = async (data) => {
     if (!uid) {

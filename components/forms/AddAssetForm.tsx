@@ -69,7 +69,6 @@ export function AddAssetForm() {
   const assetCategory = getCategories(assetSubtype);
   const assetCurrency: string[] = getCurrencies(assetSubtype);
   const assetAccount = getAccounts(assetSubtype);
-  // const assetExchange = getExchanges(assetSubtype);
 
   useEffect(() => {
     setValue('type', assetType ? assetType : '');
@@ -335,7 +334,9 @@ export function AddAssetForm() {
             <div className={classDiv}>
               <h3 className={classTitle}>
                 Purpose{' '}
-                <span className='text-xs font-normal opacity-50'>(optional)</span>
+                <span className='text-xs font-normal opacity-50'>
+                  (optional)
+                </span>
               </h3>
               <ul className={classUl}>
                 {purposeOptions.map((purposeOption) => (

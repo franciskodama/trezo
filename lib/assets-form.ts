@@ -90,6 +90,7 @@ export const getWallets = (subtype: string) => {
     case 'BTC':
       return [
         'Binance',
+        'Lbank',
         'Bybit',
         'Gate.io',
         'BingX',
@@ -132,6 +133,7 @@ export const getWallets = (subtype: string) => {
     case 'Stablecoins':
       return [
         'Binance',
+        'Lbank',
         'Bybit',
         'Gate.io',
         'BingX',
@@ -157,6 +159,7 @@ export const getWallets = (subtype: string) => {
       return ['Nubank', 'Inter', 'Itaú', 'ClearXP', 'Binance', 'Bybit'];
     default:
       return [
+        'Lbank',
         'Binance',
         'Bybit',
         'Gate.io',
